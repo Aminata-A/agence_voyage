@@ -1,13 +1,15 @@
 <?php
-$server_name = "localhost";
-$user_name = "root";
+// Connexion à la base de données
+$servername = "localhost";
+$username = "root";
 $password = "";
-$database = "agence_de_voyage";
+$dbname = "agence_de_voyage";
 
-$conn = new mysqli($server_name, $user_name, $password, $database);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-if ($conn->connect_error){
-    die("Echec de la connexion: " . $con->connect_error);
+// Vérifier la connexion
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 
 ?>
