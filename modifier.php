@@ -20,7 +20,8 @@ if(isset($_GET['id']) && !empty($_GET['id'])) {
         $email = $row['email'];
         $telephone = $row['telephone'];
         $adresse = $row['adresse'];
-        $classe = $row['classe'];
+        $date_depart = $row['date_depart'];
+        $date_retour = $row['date_retour'];
         $id_destination = $row['id_destination'];
     } else {
         echo "Aucun billet trouvé avec cet identifiant.";
@@ -39,7 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $telephone = $_POST['telephone'];
     $adresse = $_POST['adresse'];
-    $classe = $_POST['classe'];
+    $date_depart = $_POST['date_depart'];
+    $date_retour = $_POST['date_retour'];
     $id_destination = $_POST['id_destination'];
 
     // Mise à jour des données dans la table Clients
@@ -50,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conn->query($sql_update_client) === TRUE) {
         // Mise à jour des données dans la table Billets
         $sql_update_billet = "UPDATE Billets 
-                              SET classe = '$classe', id_destination = '$id_destination' 
+                              SET date_depart = '$date_depart', date_retour = '$date_retour', id_destination = '$id_destination' 
                               WHERE id_billet = $id_billet";
         
         if ($conn->query($sql_update_billet) === TRUE) {
@@ -86,11 +88,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label for="telephone">Téléphone :</label>
         <input type="text" id="telephone" name="telephone" value="<?php echo $telephone; ?>" required><br>
 
+        
+        <label for="date_depart">Date de depart :</label>
+        <input type="date" id="date_depart" name="date_depart" value="<?php echo $date_depart; ?>" required><br>
+
+        <label for="date_retour">Date de retour :</label>
+        <input type="date" id="date_retour" name="date_retour" value="<?php echo $date_retour; ?>" required><br>
+
         <label for="adresse">Adresse :</label>
         <textarea id="adresse" name="adresse" required><?php echo $adresse; ?></textarea><br>
 
-        <label for="classe">Classe :</label>
-        <input type="text" id="classe" name="classe" value="<?php echo $classe; ?>" required><br>
 
         <label for="id_destination">Navette :</label>
         <select id="id_destination" name="id_destination">

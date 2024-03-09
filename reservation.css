@@ -45,68 +45,13 @@ main{
     background-color: #d9d9d95a;
     padding-top: 4em;
 }
-/*background: linear-gradient(to right, blue, pink);*/
-h1{
-    text-align: center;
-    color: #01295D;
-}
-h1 span{
-    color: #F25C05;
-}
-h4{
-    color: #01295D;
-    text-align: center;
-}
-.banniere{
-    display: flex;
-    margin-top: 4em;
-}
-form{
-    width: 50%;
-    display: flex;
+.billets{
     justify-content: center;
 }
-form h2{
-    color: #01295D;
-    font-size: 2.5em ;
-}
-form ul div{
-     display: flex;
-     justify-content: space-between;
-     width: 105%;
-     margin-top: 1em;
-} 
-form ul li{
-    list-style-type: none;
-} 
-form .info-client{
-    width: 19em;
-    height: 3.5em;
-    background-color: #01295d1d;
-}
-form ul li textarea{
-    width: 105%;
-    height: 6em;
-    margin: 1em 0 1.5em 0;
-    background-color: #01295d1d;
-    border: .5 solid gray;
-
-}    
-.banniere img{
+.billet {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
     width: 50%;
-}
-.boutton{
-    padding: .7em 3em;
-    background-color: #01295D;
-    color: #F25C05;
-    font-weight: bold;
-    border-radius: 50px;
-}
-
-.horaire{
-    width: 50%;
-    height: 28em;
-}
-.test{
-    display: flex;
+    
 }
