@@ -79,25 +79,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div>
     <h2>Réserver votre billet</h2>
         <ul> 
-        <div>
+        <div class="form">
         <li><input type="text" id="nom" name="nom" class="info-client" placeholder="nom"  required></li>
 
         <li><input type="text" id="prenom" name="prenom" class="info-client" placeholder="prenom" required></li>
         </div>
 
-        <div>
+        <div class="form">
         <li><input type="email" id="email" name="email" class="info-client" placeholder="email" required></li>
 
         <li><input type="text" id="telephone" name="telephone" class="info-client" placeholder="Numero téléphone ex:77 *** ** **" required></li>
         </div>
 
+        <div class="form">            
         <div>
+        <label for="date_depart" >Date de depart</label>
         <li><input type="date" id="date_depart" name="date_depart" class="info-client" placeholder="date_depart" required></li>
-
-        <li><input type="date" id="date_retour" name="date_retour" class="info-client" placeholder="Numero téléphone ex:77 *** ** **" required></li>
         </div>
 
+
         <div>
+        <label for="date_retout" >Date de retour</label>
+        <li><input type="date" id="date_retour" name="date_retour"  class="info-client" placeholder="Numero téléphone ex:77 *** ** **" required></li>
+        </div>
+        </div>
+
+
+        <div class="form">
         <li><select id="id_destination" name="id_destination" class="info-client"></li>
             <?php
             // Sélection des destinations depuis la base de données

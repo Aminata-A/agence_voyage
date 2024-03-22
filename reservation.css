@@ -44,6 +44,8 @@ header ul li a:hover{
 main{
     background-color: #d9d9d95a;
     padding-top: 4em;
+    min-height: 100vh;
+    padding: 5em;
 }
 .billets{
     justify-content: center;
